@@ -1,4 +1,4 @@
-alert("JS cargando");
+//alert("JS cargando");
 let menuVisible = false;
 //funcion que oculta  o muestra menu
 function mostrarOcultarMenu() {
