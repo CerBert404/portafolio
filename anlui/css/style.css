@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /*VARIABLES*/
@@ -36,6 +37,13 @@ img {
   width: 90%;
   margin: auto;
 }
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container h1 {
   text-align: center;
   font-size: 130%;
@@ -64,8 +72,8 @@ img {
 
 .hero {
   position: relative;
-  min-height: 100vh;
-  height: 100svh;
+  min-height: 50vh;
+  height: 80svh;
   max-width: auto, relative;
   background-size: cover;
   background-position: center top;
@@ -91,7 +99,8 @@ img {
 }
 
 .hero-content h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  align-items: center
   margin-bottom: 0rem;
   color: #d2b48c;
 }
@@ -99,11 +108,38 @@ img {
 .hero-content p {
   color: var(--gris);
   line-height: 1.7;
+   font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+.hero-content p::after,
+.hero-content p::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
 }
 
+.hero-content p::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hero-content p:hover::after,
+.hero-content p:hover::before {
+  transform: scaleX(1);
+}
 /*CATALOGO*/
 .catalogo {
   padding: 1px;
+  align-items: 45%;
 }
 .filtros {
   text-align: center;
@@ -111,25 +147,26 @@ img {
 }
 
 .filtros button {
-  padding: 10px 5px;
-  margin: 20px;
-  border: none;
-  background: black;
+  padding: 30px 80px;
+  margin: 10px;
+  border: #ffffff;
+  background: #1cb698;
   color: aqua;
   cursor: pointer;
-  border-radius: 20px;
-}
+  border-radius: 10%;
 
-.filtros button.activo {
-  background-color: #b30000;
+.filtros button:hover {
+  background-color: #06d4eb;
 }
 h2 {
   text-align: center;
+  font-size: 2.3rem;
   margin-bottom: 3rem;
   color: var(--rojo);
 }
 p {
   text-align: justify;
+  font-size: 150%;
 }
 
 .grid {
@@ -157,13 +194,13 @@ p {
   border-radius: 25%;
   min-width: 30%;
   flex: 1;
-  transition: 0.3s all ease;
+  transition: 0.3s;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   flex: 2;
-  transform: translateY(-15px);
+  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -172,16 +209,15 @@ p {
 }
 
 .card img {
-  transition: transform 0.4s ease;
-  display: block;
-  width: 80%;
-  max-width: 250px;
-  max-height: 450px;
+  transition: 0.3s ;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 80px;
 }
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 /*BOTON contacto*/
 .btn {
