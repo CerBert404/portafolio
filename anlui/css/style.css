@@ -19,12 +19,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--negro);
   color: var(--blanco);
-  line-height: 1.6;
+  line-height: 1;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  font-size: 1.2rem;
 }
 
 img {
@@ -34,7 +35,7 @@ img {
 
 /*CONTENEDOR*/
 .container {
-  width: 90%;
+  width: 70%;
   margin: auto;
 }
 
@@ -43,10 +44,9 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
 .container h1 {
   text-align: center;
-  font-size: 130%;
+  font-size: 290%;
 }
 
 /*HEADER*/
@@ -108,11 +108,12 @@ img {
 .hero-content p {
   color: var(--gris);
   line-height: 1.7;
-   font-size: 2rem;
+  font-size: 2rem;
   color: #ffffff;
   position: relative;
   display: inline-block;
 }
+
 .hero-content p::after,
 .hero-content p::before {
   content: "";
@@ -136,6 +137,7 @@ img {
 .hero-content p:hover::before {
   transform: scaleX(1);
 }
+
 /*CATALOGO*/
 .catalogo {
   padding: 1px;
@@ -147,13 +149,14 @@ img {
 }
 
 .filtros button {
-  padding: 30px 80px;
+  padding: 30px 30px;
   margin: 10px;
   border: #ffffff;
   background: #1cb698;
   color: aqua;
   cursor: pointer;
   border-radius: 10%;
+}
 
 .filtros button:hover {
   background-color: #06d4eb;
@@ -209,7 +212,7 @@ p {
 }
 
 .card img {
-  transition: 0.3s ;
+  transition: 0.3s;
   display: grid;
   width: 100%;
   aspect-ratio: 3/4;
@@ -257,3 +260,4 @@ p {
     margin-left: 1rem;
   }
 }
+
